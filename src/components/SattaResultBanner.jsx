@@ -2,6 +2,17 @@ import React from 'react';
 import { AlertTriangle, Calendar, MapPin, Clock, ArrowRight, BarChart3 } from 'lucide-react';
 
 const SattaResultModern = () => {
+  // Updated list of 7 specific zones
+  const zones = [
+    'Delhi Bazar',
+    'Shri Ganesh',
+    'Faridabad',
+    'Ghaziabad',
+    'Gali',
+    'Disawar',
+    'Noida King'
+  ];
+
   return (
     <div className="min-h-screen bg-gray-100 py-6 px-4 sm:py-12 sm:px-6 lg:px-8 font-sans">
       
@@ -42,7 +53,7 @@ const SattaResultModern = () => {
               Covered Zones
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {['Gali', 'Desawar', 'Ghaziabad', 'Faridabad'].map((zone) => (
+              {zones.map((zone) => (
                 <div key={zone} className="flex items-center justify-between p-4 rounded-2xl bg-gray-50 border border-gray-100 hover:border-indigo-200 transition-colors group cursor-default">
                   <span className="font-bold text-gray-700 group-hover:text-indigo-700 transition-colors">{zone}</span>
                   <div className="bg-white p-2 rounded-full shadow-sm text-gray-400">
@@ -51,24 +62,8 @@ const SattaResultModern = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Historical Charts - Chip Layout */}
-          <div>
-            <h3 className="text-gray-900 font-bold text-lg mb-4 flex items-center">
-              <BarChart3 className="w-5 h-5 mr-2 text-indigo-600" />
-              Historical Charts
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {[2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025].map((year) => (
-                <span key={year} className="px-4 py-2 bg-indigo-50 text-indigo-700 text-sm font-bold rounded-lg hover:bg-indigo-100 transition-colors cursor-pointer border border-indigo-100">
-                  {year}
-                </span>
-              ))}
-            </div>
-          </div>
+          </div> 
         </div>
-
         {/* DISCLAIMER SECTION: Distinct Visual Style */}
         <div className="bg-red-50 border-t border-red-100 p-6 sm:p-8">
           <div className="flex flex-col sm:flex-row gap-5">
@@ -89,7 +84,8 @@ const SattaResultModern = () => {
             </div>
           </div>
         </div>
-      </div> 
+
+      </div>
     </div>
   );
 };
