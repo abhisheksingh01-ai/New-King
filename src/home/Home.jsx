@@ -6,6 +6,7 @@ import HighlightBanner from "../components/header/HighlightBanner";
 import WhatsAppButton from "../components/main/WhatsAppButton";
 import GameResultsTable from "../components/main/GameResultsTable";
 import LiveResultCards from "../components/main/LiveResultCards";
+import Disclaimer from "../components/Disclaimer/Disclaimer";
 import RecentResultsWidget from "../components/main/RecentResultsWidget";
 
 
@@ -34,6 +35,7 @@ export default function Home() {
       <Navbar />
       <HeaderStrip />
       <HighlightBanner />
+      <Disclaimer />
       <RecentResultsWidget/>
       <div ref={resultsRef}>
         <LiveResultCards/>
