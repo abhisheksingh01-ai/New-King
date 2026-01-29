@@ -183,7 +183,7 @@ const MobileTableBlock = ({ columns, rows, todayStr }) => {
     <div className="bg-white shadow-md border-y border-gray-200">
       <table className="w-full text-center border-collapse table-fixed">
         {/* Sticky Header: 'top-[65px]' accounts for the sticky Navbar height */}
-        <thead className="bg-slate-800 text-white text-[10px] uppercase sticky top-[64px] z-40 shadow-sm">
+        <thead className="bg-slate-800 text-white text-[10px] uppercase sticky top-16 z-40 shadow-sm">
           <tr>
             <th className="w-12 py-3 border-r border-slate-600 bg-slate-800">Day</th>
             {columns.map(col => (
@@ -222,7 +222,7 @@ const RowItem = React.memo(({ row, columns, idx, todayStr, isMobile }) => {
       </td>
       {columns.map(col => (
         <td key={`${row.date}-${col.key}`} className="border-r border-gray-200 font-bold text-slate-900 last:border-r-0">
-          {row.games?.[col.key]?.result || <span className="text-gray-200">-</span>}
+          {row.games?.[col.key]?.result || <span className="text-gray-200"></span>}
         </td>
       ))}
     </tr>
