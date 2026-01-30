@@ -43,6 +43,7 @@ export default function Home() {
       <div ref={chartRef}>
         <GameResultsTable/>
       </div>
+      <Disclaimer />
       <WhatsAppButton />
     </>
   );
